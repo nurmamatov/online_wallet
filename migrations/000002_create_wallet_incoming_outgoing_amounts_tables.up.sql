@@ -16,12 +16,3 @@ CREATE TABLE IF NOT EXISTS wallet_fall (
     updated_at TIMESTAMP,
     deleted_at TIMESTAMP DEFAULT NULL
 );
-
-CREATE TABLE IF NOT EXISTS wallet_spend (
-    spend_id UUID PRIMARY KEY,
-    wallet_id UUID REFERENCES wallet(wallet_id),
-    balance REAL,
-    created_at TIMESTAMP NOT NULL,
-    updated_at TIMESTAMP,
-    deleted_at TIMESTAMP DEFAULT NULL
-);
